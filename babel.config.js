@@ -1,4 +1,4 @@
-module.exports = api => {
+export default api => {
   const isTest = api.env('test')
   const babelPresetEnvOptions = isTest
     ? {
