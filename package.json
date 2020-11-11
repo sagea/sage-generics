@@ -5,24 +5,20 @@
   "main": "es/SageEvents.js",
   "type": "module",
   "scripts": {
-    "build:es": "npx babel src --out-dir es/ --config-file ./.babelrc --extensions .ts",
-    "clean": "rimraf lib dist es coverage types",
     "test": "jest",
-    "build": "rollup -c",
-    "prepare": "npm run clean; npm run build; npm test"
+    "build": "babel src --out-dir es/ --config-file ./babel.config.js --extensions .ts"
   },
   "author": "Alexander Sage <sagezander@gmail.com>",
   "repository": "github.com:sagea/sage-events",
   "bugs": "https://github.com/sagea/sage-events/issues",
   "license": "MIT",
   "keywords": [
-    "simple state store",
-    "simplestatestore",
-    "store",
-    "predictable",
-    "functional",
-    "immutable",
-    "state",
+    "sage",
+    "generics",
+    "sage generics",
+    "sagea",
+    "events",
+    "event emitter",
     "javascript",
     "typescript"
   ],
