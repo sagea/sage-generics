@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore .",
+    "check-types": "tsc",
     "prettier": "prettier --write --ignore-path .gitignore '**/*.js' '**/*.ts'",
     "build": "babel src --out-dir es/ --config-file ./babel.config.js --extensions .ts --out-file-extension .mjs"
   },

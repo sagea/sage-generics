@@ -12,6 +12,7 @@
     "removeComments": false,
     "strict": true,
     "noUnusedLocals": true,
+    "noEmit": true,
     "noUnusedParameters": true,
     "moduleResolution": "node",
     "baseUrl": "./",
