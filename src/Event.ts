@@ -1,4 +1,4 @@
-import { CallbackFunction } from './CallbackFunction.js'
+import { CallbackFunction } from './CallbackFunction'
 
 export function Event<InvokeType>() {
   const callbacks = new Set<CallbackFunction<InvokeType>>()

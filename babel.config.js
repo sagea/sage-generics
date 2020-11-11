@@ -28,7 +28,9 @@ module.exports = api => {
       ['@babel/preset-env', babelPresetEnvOptions],
       '@babel/preset-typescript',
     ],
-    plugins: [],
+    plugins: [
+      ["babel-plugin-add-import-extension", { extension: "mjs" }]
+    ],
     ignore,
   }
 }

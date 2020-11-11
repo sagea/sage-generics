@@ -1,1 +1,1 @@
-export { Event } from './Event.js'
+export { Event } from './Event'
