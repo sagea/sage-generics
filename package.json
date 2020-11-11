@@ -2,7 +2,7 @@
   "name": "sage-generics",
   "version": "1.0.1",
   "description": "Collection of different event emitter emplimentations for my own use",
-  "main": "es/SageEvents.mjs",
+  "main": "es/index.mjs",
   "scripts": {
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore .",
