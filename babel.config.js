@@ -1,5 +1,6 @@
-export default api => {
+module.exports = api => {
   const isTest = api.env('test')
+  console.log('isTest', api.env())
   const babelPresetEnvOptions = isTest
     ? {
         targets: {
