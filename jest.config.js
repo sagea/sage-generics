@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
