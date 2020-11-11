@@ -1,0 +1,59 @@
+{
+  "name": "sage-generics",
+  "version": "1.0.0",
+  "description": "Collection of different event emitter emplimentations for my own use",
+  "main": "es/SageEvents.js",
+  "type": "module",
+  "scripts": {
+    "build:es": "npx babel src --out-dir es/ --config-file ./.babelrc --extensions .ts",
+    "clean": "rimraf lib dist es coverage types",
+    "test": "jest",
+    "build": "rollup -c",
+    "prepare": "npm run clean; npm run build; npm test"
+  },
+  "author": "Alexander Sage <sagezander@gmail.com>",
+  "repository": "github.com:sagea/sage-events",
+  "bugs": "https://github.com/sagea/sage-events/issues",
+  "license": "MIT",
+  "keywords": [
+    "simple state store",
+    "simplestatestore",
+    "store",
+    "predictable",
+    "functional",
+    "immutable",
+    "state",
+    "javascript",
+    "typescript"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "src",
+    "types"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-typescript": "7.12.1",
+    "@types/jest": "26.0.15",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "2.34.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "26.6.3",
+    "cross-env": "7.0.2",
+    "eslint": "^6.8.0",
+    "jest": "26.6.3",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.3",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "4.0.5"
+  }
+}
