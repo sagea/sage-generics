@@ -22,13 +22,15 @@ module.exports = api => {
         'src/**/__tests__/',
         'src/**/__snapshots__',
       ]
-
+  const plugins = isTest
+    ? []
+    : [['babel-plugin-add-import-extension', { extension: 'mjs' }]]
   return {
     presets: [
       ['@babel/preset-env', babelPresetEnvOptions],
       '@babel/preset-typescript',
     ],
-    plugins: [],
+    plugins,
     ignore,
   }
 }
