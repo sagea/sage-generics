@@ -1,1 +1,1 @@
-export type CallbackFunction<T> = (event: T) => any;
+export type CallbackFunction<T> = (event: T) => any
