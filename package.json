@@ -27,11 +27,7 @@
     "typescript"
   ],
   "files": [
-    "dist",
-    "lib",
-    "es",
-    "src",
-    "types"
+    "es"
   ],
   "dependencies": {},
   "devDependencies": {
