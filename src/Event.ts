@@ -1,6 +1,6 @@
 import { CallbackFunction } from './CallbackFunction'
 
-export function Event<InvokeType>() {
+export function Event<InvokeType = void>() {
   const callbacks = new Set<CallbackFunction<InvokeType>>()
   const on = (callback: CallbackFunction<InvokeType>): (() => any) => {
     if (typeof callback !== 'function') {
@@ -27,7 +27,7 @@ export function Event<InvokeType>() {
       if (data.length) {
         callback(data[0])
       } else {
-        callback()
+        (callback as any)()
       }
     }
   }
