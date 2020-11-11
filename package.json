@@ -2,13 +2,12 @@
   "name": "sage-generics",
   "version": "1.0.0",
   "description": "Collection of different event emitter emplimentations for my own use",
-  "main": "es/SageEvents.js",
-  "type": "module",
+  "main": "es/SageEvents.mjs",
   "scripts": {
     "test": "jest",
     "lint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --write --ignore-path .gitignore '**/*.js' '**/*.ts'",
-    "build": "babel src --out-dir es/ --config-file ./babel.config.js --extensions .ts"
+    "build": "babel src --out-dir es/ --config-file ./babel.config.js --extensions .ts --out-file-extension .mjs"
   },
   "author": "Alexander Sage <sagezander@gmail.com>",
   "repository": "github.com:sagea/sage-events",
