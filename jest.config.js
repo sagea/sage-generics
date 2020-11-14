@@ -12,4 +12,5 @@ module.exports = {
     '^.+\\.[t|j]sx?$': 'babel-jest',
   },
   roots: ['<rootDir>/src'],
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 }

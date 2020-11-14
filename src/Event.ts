@@ -1,10 +1,11 @@
 import { CallbackFunction } from './CallbackFunction'
+import * as logger from './utils/logger'
 
 export function Event<InvokeType = void>() {
   const callbacks = new Set<CallbackFunction<InvokeType>>()
   const on = (callback: CallbackFunction<InvokeType>): (() => any) => {
     if (typeof callback !== 'function') {
-      console.error(
+      logger.error(
         `Event.on(callback) invalid parameter type provided. Expected a function but received`,
         callback,
       )
@@ -15,7 +16,7 @@ export function Event<InvokeType = void>() {
   }
   const off = (callback: CallbackFunction<InvokeType>) => {
     if (typeof callback !== 'function') {
-      return console.error(
+      return logger.error(
         `Event.off(callback) invalid parameter type provided. Expected a function but received`,
         callback,
       )
@@ -27,25 +28,17 @@ export function Event<InvokeType = void>() {
       if (data.length) {
         callback(data[0])
       } else {
-        (callback as any)()
+        ;(callback as any)()
       }
     }
   }
   const clear = () => {
     callbacks.clear()
   }
-  return {
-    get on() {
-      return on
-    },
-    get off() {
-      return off
-    },
-    get emit() {
-      return emit
-    },
-    get clear() {
-      return clear
-    },
-  }
+  return Object.freeze({
+    on,
+    off,
+    emit,
+    clear,
+  })
 }
