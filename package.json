@@ -1,6 +1,6 @@
 {
   "name": "sage-generics",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Collection of different event emitter emplimentations for my own use",
   "main": "es/index.mjs",
   "scripts": {
