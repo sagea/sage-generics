@@ -1,3 +1,3 @@
-export { Event } from './Event'
-export { LocalObjectStorage } from './LocalObjectStorage'
-export { SetStateManager } from './StateManagers/SetStateManager';
+export { Event } from './Event.ts'
+export { LocalObjectStorage } from './LocalObjectStorage.ts'
+export { SetStateManager } from './StateManagers/SetStateManager.ts';

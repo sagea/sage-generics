@@ -1,4 +1,5 @@
-import { Event } from '../Event'
+import { jest } from "@jest/globals";
+import { Event } from '../Event.ts'
 describe(Event.name, () => {
   it('should add listeners and call them when emitted', () => {
     const cb1 = jest.fn()

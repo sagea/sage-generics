@@ -1,8 +1,8 @@
-import { safeParse } from './utils/json'
-import * as localStorage from './localStorage'
-import { SageGenericsType } from './symbols'
-import { Dictionary, isFunction, isObject } from './utils/types'
-import * as logger from './utils/logger'
+import { safeParse } from './utils/json.ts'
+import * as localStorage from './localStorage.ts'
+import { SageGenericsType } from './symbols.ts'
+import { Dictionary, isFunction, isObject } from './utils/types.ts'
+import * as logger from './utils/logger.ts'
 
 function KEY<T extends string>(key: T) {
   return `SAGE-GENERICS-LOCAL-OBJECT-STORAGE.${key}` as const

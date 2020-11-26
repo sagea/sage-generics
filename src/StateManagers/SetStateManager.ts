@@ -1,4 +1,4 @@
-import { Event } from '../Event'
+import { Event } from '../Event.ts'
 
 export function SetStateManager<State>(defaultState: State) {
   let state = defaultState;
