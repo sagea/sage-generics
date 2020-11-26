@@ -1,1 +1,2 @@
-jest.mock('./src/utils/logger')
+import { jest } from "@jest/globals";
+jest.mock('./src/utils/logger.js')

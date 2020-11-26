@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
@@ -7,9 +7,9 @@ module.exports = {
   ],
   resetMocks: true,
   resetModules: true,
-  collectCoverage: true,
+  collectCoverage: false,
   transform: {
-    '^.+\\.[t|j]sx?$': 'babel-jest',
+    '^.+\\.[t|j]sx?$': './jest.transformer.mjs',
   },
   roots: ['<rootDir>/src'],
   setupFilesAfterEnv: ['./jest.setup.ts'],

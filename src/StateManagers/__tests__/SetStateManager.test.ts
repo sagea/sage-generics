@@ -1,4 +1,5 @@
-import { SetStateManager } from '../SetStateManager'
+import { jest } from "@jest/globals";
+import { SetStateManager } from '../SetStateManager.ts'
 
 describe(SetStateManager.name, () => {
   it('should return default state initially', () => {

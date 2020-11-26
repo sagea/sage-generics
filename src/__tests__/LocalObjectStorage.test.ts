@@ -1,7 +1,10 @@
+import { jest } from "@jest/globals";
+import { SageGenericsType } from '../symbols.ts'
+import * as logger from '../utils/logger.ts'
+
 jest.mock('../localStorage')
-import { LocalObjectStorage } from '../LocalObjectStorage'
-import { SageGenericsType } from '../symbols'
-import * as logger from '../utils/logger'
+const { LocalObjectStorage } = await import('../LocalObjectStorage.ts');
+
 
 expect.addSnapshotSerializer({
   test: obj => obj && obj[SageGenericsType] === LocalObjectStorage.name,

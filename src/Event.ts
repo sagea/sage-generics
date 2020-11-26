@@ -1,5 +1,5 @@
-import { CallbackFunction } from './CallbackFunction'
-import * as logger from './utils/logger'
+import type { CallbackFunction } from './CallbackFunction.d.ts'
+import * as logger from './utils/logger.ts'
 
 export function Event<InvokeType = void>() {
   const callbacks = new Set<CallbackFunction<InvokeType>>()

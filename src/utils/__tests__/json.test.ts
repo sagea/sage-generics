@@ -1,4 +1,4 @@
-import { safeParse } from '../json'
+import { safeParse } from '../json.ts'
 
 describe(safeParse.name, () => {
   it('should parse a json sring', () => {
