@@ -42,3 +42,5 @@ export function Event<InvokeType = void>() {
     clear,
   })
 }
+
+console.log('test event push yo')
