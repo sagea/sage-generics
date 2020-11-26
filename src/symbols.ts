@@ -1,2 +1,2 @@
 export const SageGenericsType = Symbol('SageGenericsType')
-console.log('test');
+console.log('test 2');
