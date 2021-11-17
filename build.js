@@ -29,6 +29,7 @@ const generateHTML = (paths) => {
         ${
           paths
             .map(path => path.replace(/^src\//, ''))
+            .map(path => path.replace(/\.ts/, '.js'))
             .map(path => `<li><a href="${path}">${path}</a></li>`)
             .join('\n')
         }
