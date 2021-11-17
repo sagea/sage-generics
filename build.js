@@ -16,6 +16,9 @@ const renameExtensionPlugin = {
 }
 
 const generateHTML = (paths) => {
+  const processedPaths = paths
+  .map(path => path.replace(/^src\//, ''))
+  .map(path => path.replace(/\.ts/, '.js'))
   return `
     <!DOCTYPE html>
       <html lang="en">
@@ -27,9 +30,7 @@ const generateHTML = (paths) => {
       </head>
       <body>
         ${
-          paths
-            .map(path => path.replace(/^src\//, ''))
-            .map(path => path.replace(/\.ts/, '.js'))
+          processedPaths
             .map(path => `<li><a href="${path}">${path}</a></li>`)
             .join('\n')
         }
