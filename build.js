@@ -1,7 +1,7 @@
 import esbuild from 'esbuild'
 import glob from 'glob'
-import {writeFile} from 'fs/promises';
 import { resolve } from 'path'
+import { writeFileSync } from 'fs';
 
 
 const renameExtensionPlugin = {
@@ -16,7 +16,7 @@ const renameExtensionPlugin = {
 }
 
 const generateHTML = (paths) => {
-  const htmlFile = `
+  return `
     <!DOCTYPE html>
       <html lang="en">
       <head>
@@ -35,7 +35,6 @@ const generateHTML = (paths) => {
       </body>
     </html>
   `
-  writeFile(resolve(process.cwd(), 'dist/index.html'), htmlFile)
 }
 
 const results = glob.sync('src/**/*.ts', {
@@ -52,4 +51,8 @@ esbuild.build({
   },
   plugins: [renameExtensionPlugin]
 })
-console.log(generateHTML(results))
+.then(() => {
+  writeFileSync(resolve(process.cwd(), 'dist/index.html'), generateHTML(results))
+})
+
+
