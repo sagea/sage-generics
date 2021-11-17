@@ -28,13 +28,13 @@ const generateHTML = (paths) => {
       <body>
         ${
           paths
-            .map(path => path.replace(/^src/, ''))
+            .map(path => path.replace(/^src\//, ''))
             .map(path => `<li><a href="${path}">${path}</a></li>`)
             .join('\n')
         }
       </body>
     </html>
-  `
+  `.trim()
 }
 
 const results = glob.sync('src/**/*.ts', {
