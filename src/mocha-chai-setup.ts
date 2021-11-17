@@ -18,7 +18,7 @@ const loadCss = async (src) => {
     document.body.appendChild(link)
   })
 }
-const setupMochaChai = async ({
+export const setupMochaChai = async ({
 	mochaVersion = '9.1.3',
   chaiVersion = '4.3.4',
 } = {}, caller) => {
